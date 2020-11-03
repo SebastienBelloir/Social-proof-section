@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Spartan', sans-serif;
+}
+
+:root {
+    --card-bg-color: hsl(300, 43%, 22%);
+    --pink-bg-color: hsl(333, 80%, 67%);
+    --card-text-color: hsl(303, 10%, 53%);
+    --card-name-color: hsl(0, 0%, 100%);
+    --slogan-color: hsl(300, 24%, 96%);
+}
+
+.bg-top-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bg-bottom-pattern {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+header {
+    display: flex;
+    padding-top: 2%;
+}
+
+.first-box {
+    width: 50%;
+    padding: 0em 10em;
+}
+
+.first-box h1 {
+    color: var(--card-bg-color);
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.first-box .slogan {
+    color: var(--card-text-color);
+    line-height: 1.8em;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 0em 1em 0em 0em;
+}
+
+.second-box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-top: 3%;
+}
+
+.second-box .review {
+    background-color: var(--slogan-color);
+    color: var(--card-bg-color);
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    padding: 1em 3.5em;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.review:nth-child(2) {
+    margin-left: 10%;
+}
+
+.review:nth-child(3) {
+    margin-left: 20%;
+}
+
+section {
+    width: 100%;
+    height: 48vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 11em 4em 8em;
+}
+
+section img {
+    border-radius: 50%;
+    height: 60px;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    margin: 0% 2%;
+    padding: 2em 4em;
+}
+
+.card:nth-child(1) {
+    align-self: start;
+}
+
+.card:nth-child(2) {
+    align-self: center;
+}
+
+.card:nth-child(3) {
+    align-self: flex-end;
+}
+
+.card .person {
+    color: var(--slogan-color);
+    font-weight: 700;
+}
+
+.card .person-text {
+    color: var(--slogan-color);
+    line-height: 1.5em;
+}
+
+.card .person-role {
+    color: var(--pink-bg-color);
+    font-size: 15px;
+}
+
+.card .person-content {
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.img-name {
+    display: flex;
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding: 1em 1em;
+    }
+
+    .first-box {
+        padding: 2em 1.5em;
+        width: 100%;
+    }
+
+    .first-box h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .first-box .slogan {
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .second-box {
+        width: 100%;
+        padding: 0em 2em;
+    }
+
+    .second-box .review {
+        width: 100%;
+        margin-left: 0%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .card {
+        margin-top: 5%;
+    }
+
+    .bg-top-pattern {
+        width: 100%;
+    }
+
+    .bg-bottom-pattern {
+        display: none;
+    }
+
+    .card .person-text {
+        font-size: 0.8em;
+    }
+}
